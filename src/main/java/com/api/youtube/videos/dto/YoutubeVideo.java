@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Video {
+public class YoutubeVideo {
 
   private String id;
-  private String title;
-  private String description;
+  private VideoSnippet snippet;
 
 }

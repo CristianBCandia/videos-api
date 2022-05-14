@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Video {
+public class VideoSnippet {
 
-  private String id;
   private String title;
   private String description;
 
