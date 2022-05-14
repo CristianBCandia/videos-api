@@ -1,4 +1,4 @@
 youtube:
-  url: https://youtube.googleapis.com/youtube/v3/search?
+  url: https://youtube.googleapis.com/youtube/v3
   auth:
     key: AIzaSyCJjnSbaZE5YTtvuOtdO6r8TNWf0z45jGw

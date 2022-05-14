@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class YoutubeVideosResponse extends YoutubeResponse {
-  private List<YoutubeVideo> items;
+public class YoutubePlaylistResponse extends YoutubeResponse {
+  private List<YoutubePlaylist> items;
 }

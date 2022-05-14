@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class YoutubeVideo {
 
-  private String id;
+  private VideoId id;
   private VideoSnippet snippet;
 
 }

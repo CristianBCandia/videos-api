@@ -1,4 +1,4 @@
 youtube:
-  url: https://youtube.googleapis.com/youtube/v3/search?
+  url: https://youtube.googleapis.com/youtube/v3
   auth:
     key: ${YOUTUBE_API_KEY}

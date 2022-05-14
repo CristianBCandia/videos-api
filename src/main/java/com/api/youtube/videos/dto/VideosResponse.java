@@ -11,5 +11,7 @@ public class VideosResponse {
 
   private List<Video> videos;
   private Integer total;
+  private String nextPage;
+  private String prevPage;
 
 }

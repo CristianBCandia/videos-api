@@ -9,6 +9,9 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class YoutubeVideosResponse extends YoutubeResponse {
-  private List<YoutubeVideo> items;
+public class CommentResponse {
+  private List<Comment> comments;
+  private Integer total;
+  private String nextPage;
+  private String prevPage;
 }
