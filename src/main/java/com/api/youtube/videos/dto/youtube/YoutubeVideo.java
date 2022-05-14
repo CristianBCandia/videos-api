@@ -1,5 +1,7 @@
-package com.api.youtube.videos.dto;
+package com.api.youtube.videos.dto.youtube;
 
+import com.api.youtube.videos.dto.video.VideoId;
+import com.api.youtube.videos.dto.video.VideoSnippet;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

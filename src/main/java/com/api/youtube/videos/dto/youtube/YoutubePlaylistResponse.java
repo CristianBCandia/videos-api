@@ -1,4 +1,4 @@
-package com.api.youtube.videos.dto;
+package com.api.youtube.videos.dto.youtube;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class YoutubeCommentsResponse extends YoutubeResponse {
-  private List<YoutubeComment> items;
+public class YoutubePlaylistResponse extends YoutubeResponse {
+  private List<YoutubePlaylist> items;
 }

@@ -1,7 +1,14 @@
 package com.api.youtube.videos.service;
 
 import com.api.youtube.videos.api.YoutubeApiService;
-import com.api.youtube.videos.dto.*;
+import com.api.youtube.videos.dto.comment.Comment;
+import com.api.youtube.videos.dto.comment.CommentResponse;
+import com.api.youtube.videos.dto.comment.CommentThread;
+import com.api.youtube.videos.dto.video.Video;
+import com.api.youtube.videos.dto.video.VideosResponse;
+import com.api.youtube.videos.dto.youtube.YoutubeCommentThreadResponse;
+import com.api.youtube.videos.dto.youtube.YoutubeCommentsResponse;
+import com.api.youtube.videos.dto.youtube.YoutubeVideosResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +32,8 @@ public class VideoService {
   }
 
 
-  public CommentResponse getCommeentsByVideoId(String videoId, String page, Integer size) {
-    YoutubeResponseCommentThread youtubeResponse = youtubeApiService.getThreadCommeentsByVideoId(videoId, page, size);
+  public CommentResponse getCommentsByVideoId(String videoId, String page, Integer size) {
+    YoutubeCommentThreadResponse youtubeResponse = youtubeApiService.getThreadCommeentsByVideoId(videoId, page, size);
     YoutubeCommentsResponse response = youtubeApiService.getCommeentsByIds(youtubeResponse.getItems().stream().map(CommentThread::getId).collect(Collectors.toList()));
     return new CommentResponse(response.getItems().stream()
       .map(item -> new Comment( item.getSnippet().getAuthorDisplayName(),

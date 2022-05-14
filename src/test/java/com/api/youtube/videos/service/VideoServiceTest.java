@@ -1,6 +1,6 @@
 package com.api.youtube.videos.service;
 
-import com.api.youtube.videos.dto.YoutubeVideosResponse;
+import com.api.youtube.videos.dto.youtube.YoutubeVideosResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;

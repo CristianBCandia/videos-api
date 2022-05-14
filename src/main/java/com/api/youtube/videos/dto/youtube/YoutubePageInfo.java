@@ -1,4 +1,4 @@
-package com.api.youtube.videos.dto;
+package com.api.youtube.videos.dto.youtube;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,6 @@
 package com.api.youtube.videos.api;
 
-import com.api.youtube.videos.dto.*;
-import com.api.youtube.videos.mapper.YoutubeMapper;
+import com.api.youtube.videos.dto.youtube.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +22,6 @@ public class YoutubeApiService {
   private String url;
 
   @Autowired
-  private YoutubeMapper youtubeMapper;
-
-  @Autowired
   private RestTemplate template;
 
   public YoutubeVideosResponse getVideosByBandName(String bandName, String page, Integer size) {
@@ -40,14 +36,14 @@ public class YoutubeApiService {
     return (YoutubeVideosResponse) getYoutube(queryParams, "search", YoutubeVideosResponse.class);
   }
 
-  public YoutubeResponseCommentThread getThreadCommeentsByVideoId(String videoId, String page, Integer size) {
+  public YoutubeCommentThreadResponse getThreadCommeentsByVideoId(String videoId, String page, Integer size) {
     Map<String, String> queryParams = new HashMap<>();
     queryParams.put("videoId", videoId);
     queryParams.put("maxResults", size.toString());
     if (!ObjectUtils.isEmpty(page)) {
       queryParams.put("pageToken", page);
     }
-    return (YoutubeResponseCommentThread) getYoutube(queryParams, "commentThreads", YoutubeResponseCommentThread.class);
+    return (YoutubeCommentThreadResponse) getYoutube(queryParams, "commentThreads", YoutubeCommentThreadResponse.class);
   }
 
   public YoutubeCommentsResponse getCommeentsByIds(List<String> ids) {

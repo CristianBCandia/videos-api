@@ -1,7 +1,9 @@
 package com.api.youtube.videos.service;
 
 import com.api.youtube.videos.api.YoutubeApiService;
-import com.api.youtube.videos.dto.*;
+import com.api.youtube.videos.dto.playlist.Playlist;
+import com.api.youtube.videos.dto.playlist.PlaylistResponse;
+import com.api.youtube.videos.dto.youtube.YoutubePlaylistResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

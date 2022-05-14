@@ -1,4 +1,4 @@
-package com.api.youtube.videos.dto;
+package com.api.youtube.videos.dto.playlist;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,9 +9,10 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommentResponse {
-  private List<Comment> comments;
+public class PlaylistResponse {
+  private List<Playlist> playlists;
   private Integer total;
   private String nextPage;
   private String prevPage;
+
 }
