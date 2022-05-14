@@ -33,8 +33,8 @@ public class VideoService {
 
 
   public CommentResponse getCommentsByVideoId(String videoId, String page, Integer size) {
-    YoutubeCommentThreadResponse youtubeResponse = youtubeApiService.getThreadCommeentsByVideoId(videoId, page, size);
-    YoutubeCommentsResponse response = youtubeApiService.getCommeentsByIds(youtubeResponse.getItems().stream().map(CommentThread::getId).collect(Collectors.toList()));
+    YoutubeCommentThreadResponse youtubeResponse = youtubeApiService.getThreadCommentsByVideoId(videoId, page, size);
+    YoutubeCommentsResponse response = youtubeApiService.getCommentsByIds(youtubeResponse.getItems().stream().map(CommentThread::getId).collect(Collectors.toList()));
     return new CommentResponse(response.getItems().stream()
       .map(item -> new Comment( item.getSnippet().getAuthorDisplayName(),
                                 item.getSnippet().getTextDisplay()))

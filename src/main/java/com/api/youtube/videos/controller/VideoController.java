@@ -17,9 +17,6 @@ public class VideoController {
     @Autowired
     private VideoService service;
 
-    @Autowired
-    private ModelMapper mapper;
-
     @GetMapping
     //TODO: Validar size em Max 50 Min 1
     public Page<Video> getVideosByBandName(@RequestParam(value = "band_name", required = true) final String bandName,

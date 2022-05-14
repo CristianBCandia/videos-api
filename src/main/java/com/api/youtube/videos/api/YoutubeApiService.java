@@ -36,7 +36,7 @@ public class YoutubeApiService {
     return (YoutubeVideosResponse) getYoutube(queryParams, "search", YoutubeVideosResponse.class);
   }
 
-  public YoutubeCommentThreadResponse getThreadCommeentsByVideoId(String videoId, String page, Integer size) {
+  public YoutubeCommentThreadResponse getThreadCommentsByVideoId(String videoId, String page, Integer size) {
     Map<String, String> queryParams = new HashMap<>();
     queryParams.put("videoId", videoId);
     queryParams.put("maxResults", size.toString());
@@ -46,7 +46,7 @@ public class YoutubeApiService {
     return (YoutubeCommentThreadResponse) getYoutube(queryParams, "commentThreads", YoutubeCommentThreadResponse.class);
   }
 
-  public YoutubeCommentsResponse getCommeentsByIds(List<String> ids) {
+  public YoutubeCommentsResponse getCommentsByIds(List<String> ids) {
     String query = String.join(",", ids);
     Map<String, String> queryParams = new HashMap<>();
     queryParams.put("part", "snippet");
@@ -54,7 +54,7 @@ public class YoutubeApiService {
     return (YoutubeCommentsResponse) getYoutube(queryParams, "comments", YoutubeCommentsResponse.class);
   }
 
-  private YoutubeResponse getYoutube(Map<String, String> queryParams, String path, Class responseType) {
+  public YoutubeResponse getYoutube(Map<String, String> queryParams, String path, Class responseType) {
     StringBuilder uri = new StringBuilder(url + "/" + path + "?key={key}");
     queryParams.keySet().forEach(key -> {
       uri.append("&").append(key).append("={").append(key).append("}");

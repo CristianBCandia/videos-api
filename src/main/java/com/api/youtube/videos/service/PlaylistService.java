@@ -16,7 +16,7 @@ public class PlaylistService {
   private YoutubeApiService youtubeApiService;
 
 
-    public PlaylistResponse getPlaylistsByBandName(String id, String page, Integer size) {
+    public PlaylistResponse getPlaylistById(String id, String page, Integer size) {
         YoutubePlaylistResponse youtubeResponse = youtubeApiService.getPlaylistsById(id, page, size);
         return new PlaylistResponse(
           youtubeResponse.getItems().stream()

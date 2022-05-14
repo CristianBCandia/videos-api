@@ -14,10 +14,10 @@ public class PlaylistController {
   private PlaylistService service;
 
   @GetMapping
-  public Page<Playlist> getPlaylistsByBandName(@RequestParam(value = "id", required = true) final String id,
-                                              @RequestParam(value = "page", required = false, defaultValue = "") final String page,
-                                              @RequestParam(value = "size", required = false, defaultValue = "20") final Integer size) {
-    PlaylistResponse response = service.getPlaylistsByBandName(id, page, size);
+  public Page<Playlist> getPlaylistById(@RequestParam(value = "id", required = true) final String id,
+                                               @RequestParam(value = "page", required = false, defaultValue = "") final String page,
+                                               @RequestParam(value = "size", required = false, defaultValue = "20") final Integer size) {
+    PlaylistResponse response = service.getPlaylistById(id, page, size);
     return new Page<Playlist>( response.getPlaylists(), response.getNextPage(),
       response.getPrevPage(), size, response.getTotal());
   }
