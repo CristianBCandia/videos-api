@@ -18,7 +18,6 @@ public class VideoController {
     private VideoService service;
 
     @GetMapping
-    //TODO: Validar size em Max 50 Min 1
     public Page<Video> getVideosByBandName(@RequestParam(value = "band_name", required = true) final String bandName,
                                            @RequestParam(value = "page", required = false, defaultValue = "") final String page,
                                            @RequestParam(value = "size", required = false, defaultValue = "20") final Integer size) {
