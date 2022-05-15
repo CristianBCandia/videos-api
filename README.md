@@ -43,5 +43,5 @@ git push -uf origin main
 - A IDE utilizada para o desenvolvimento deste projeto foi <a href="https://www.jetbrains.com/pt-br/idea/download/#section=windows">o Intellij IDE </a> que é uma excelente IDE para desenvolvimento em Java, podendo ser baixada na versão communit que é totalmente gratuita.
 
 ## API do Youtube
-- Para que a conexão coma API do YouTube funcione será necessário obter uma API KEY e colocalá nas variáveis de ambiente do projeto da seguinte forma YOUTUBE_API_KEY=[SUA API_KEY] 
+- Para que a conexão coma API do YouTube funcione será necessário obter uma API KEY e colocá-la nas variáveis de ambiente do projeto da seguinte forma YOUTUBE_API_KEY=[SUA API_KEY] 
 - <a href="https://developers.google.com/youtube/v3/getting-started">Veja como obter sua API KEY</a>
