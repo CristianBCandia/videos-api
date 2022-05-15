@@ -15,7 +15,7 @@ Este projeto foi hospedado na Heroku e está disponível para teste em https://n
 ### Busca por playlist
 
 - Busque por uma playlist utilizando o pasando o <i>query param</i> "<b>id</b>" referente ao id da playlist conforme no exemplo abaixo
-- Exemplo: https://nttdata-video-app.herokuapp.com/playlists?PL7E436F1EC114B001
+- Exemplo: https://nttdata-video-app.herokuapp.com/playlists?id=PL7E436F1EC114B001
 
 ### Paginação
 - Por padrão sua consulta retornará paginada com 20 resultados de busca, para redifinir a paginação utilize o <i>query param</i> <b>"size"</b> Ex: https://nttdata-video-app.herokuapp.com/videos?band_name=eminem&size=10
