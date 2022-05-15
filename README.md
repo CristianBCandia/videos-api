@@ -1,4 +1,4 @@
-# videos
+# Videos API
 
 ## Deploy na Heroku
 Este projeto foi hospedado na Heroku e está disponível para teste em https://nttdata-video-app.herokuapp.com
