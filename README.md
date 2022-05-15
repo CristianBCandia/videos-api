@@ -4,7 +4,7 @@
 Este projeto foi hospedado na Heroku e está disponível para teste em https://nttdata-video-app.herokuapp.com
 
 ## Testando a API
-### Busa por videos por nome de banda ou artista
+### Busca por videos por nome de banda ou artista
 - Busque por uma lista de videos atraves do endpoint https://nttdata-video-app.herokuapp.com/videos?band_name=eminem, para personalizar sua busca basta substiuir o nome "eminem" pelo nome de uma banda ou artista
 
 ### Busca por comentários referentes a um vídeo
@@ -38,6 +38,10 @@ git branch -M main
 git push -uf origin main
 ```
 
-## Pré-requisitos
+## Configurando o ambiente de desenvolvimento
 - Para rodar o projeto será necessário <a href="https://www.devmedia.com.br/instalacao-e-configuracao-do-pacote-java-jdk/23749">instalar o JDK do java 8+ </a> em sua máquina
-- Você também precisará <a href=""> instalar o Intellij IDE </a> ou uma IDE para Java de sua preferência.
+- A IDE utilizada para o desenvolvimento deste projeto foi <a href="https://www.jetbrains.com/pt-br/idea/download/#section=windows">o Intellij IDE </a> que é uma excelente IDE para desenvolvimento em Java, podendo ser baixada na versão communit que é totalmente gratuita.
+
+## API do Youtube
+- Para que a conexão coma API do YouTube funcione será necessário obter uma API KEY e colocalá nas variáveis de ambiente do projeto da seguinte forma YOUTUBE_API_KEY=[SUA API_KEY] 
+- <a href="https://developers.google.com/youtube/v3/getting-started">Veja como obter sua API KEY</a>
