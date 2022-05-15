@@ -25,13 +25,6 @@ import java.util.List;
 @SpringBootTest
 public class VideoServiceTest {
 
-  //TODO: remover
-  @Value("${youtube.auth.key}")
-  private String key;
-
-  @Value("${youtube.url}")
-  private String url;
-
   @MockBean
   private YoutubeApiService youtubeApiService;
 

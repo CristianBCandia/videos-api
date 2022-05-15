@@ -1,6 +1,7 @@
 package com.api.youtube.videos.api;
 
 import com.api.youtube.videos.dto.youtube.*;
+import com.api.youtube.videos.exception.CustomBadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,7 @@ public class YoutubeApiService {
   }
 
   public YoutubeCommentThreadResponse getThreadCommentsByVideoId(String videoId, String page, Integer size) {
+
     Map<String, String> queryParams = new HashMap<>();
     queryParams.put("videoId", videoId);
     queryParams.put("maxResults", size.toString());
@@ -55,6 +57,9 @@ public class YoutubeApiService {
   }
 
   public YoutubeResponse getYoutube(Map<String, String> queryParams, String path, Class responseType) {
+    if(this.key.isEmpty() || this.key == null) {
+      throw new CustomBadRequestException("ERRO! API Key não encontrada, para conexão com a API do YouTube é necessário obter uma chave de acesso");
+    }
     StringBuilder uri = new StringBuilder(url + "/" + path + "?key={key}");
     queryParams.keySet().forEach(key -> {
       uri.append("&").append(key).append("={").append(key).append("}");
